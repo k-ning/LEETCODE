@@ -27,25 +27,25 @@ public:
         for(i=0;i<size;i++)
         {
             //条件；
-                if(l1<(int)nums1.size()&&l2<(int)nums2.size())
+                if((l1 < nums1.size())&&(l2 < nums2.size()))
                 {
-                        if(nums1[l1]>nums2[l2])
+                        if(nums1[l1] > nums2[l2])
                         {
                                 nums3.push_back(nums2[l2]);
                                 l2++;
                         }
-                        else if(nums1[l1]<=nums2[l2])
+                        else if(nums1[l1] <= nums2[l2])
                         {
                                 nums3.push_back(nums1[l1]);
                                 l1++;
                         }
                 }
         }
-        while(l2<(int)nums2.size())
+        while(l2 < nums2.size())
         {
                 nums3.push_back(nums2[l2++]);
         }
-        while(l1<(int)nums1.size())
+        while(l1 < nums1.size())
         {
                 nums3.push_back(nums1[l1++]);
         }
@@ -57,16 +57,11 @@ public:
         }
         cout<<endl;
         */
-        double tt;
-        if((size%2)!=0)
-        {
-                tt=nums3[(size-1)/2];
-                return tt;
-        }
-        else
-        {
-                tt=(nums3[(size-1)/2]+nums3[size/2])/2.0000;
-                return tt;
+        int mid = nums3.size()/2;
+        if (nums3.size()%2 == 0) {
+                return (double)((nums3[mid]+nums3[mid-1])/2.00);
+        } else {
+                return (double)nums3[mid];
         }
     }
 };
