@@ -23,7 +23,7 @@ public:
         vector<int> nums3;//表示临时变量；
         int size=(int)nums1.size()+(int)nums2.size();
         
-        /* Sort two arrays according to the size of the */
+        /* Sort two arrays according to the size. */
         for(i=0;i<size;i++)
         {
             //条件；
