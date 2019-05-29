@@ -23,30 +23,31 @@ public:
         vector<int> nums3;//表示临时变量；
         int size=(int)nums1.size()+(int)nums2.size();
         
+        /* Sort two arrays according to the size of the */
         for(i=0;i<size;i++)
         {
             //条件；
-            if(l1<(int)nums1.size()&&l2<(int)nums2.size())
-            {
-                if(nums1[l1]>nums2[l2])
+                if(l1<(int)nums1.size()&&l2<(int)nums2.size())
                 {
-                    nums3.push_back(nums2[l2]);
-                    l2++;
+                        if(nums1[l1]>nums2[l2])
+                        {
+                                nums3.push_back(nums2[l2]);
+                                l2++;
+                        }
+                        else if(nums1[l1]<=nums2[l2])
+                        {
+                                nums3.push_back(nums1[l1]);
+                                l1++;
+                        }
                 }
-                else if(nums1[l1]<=nums2[l2])
-                {
-                    nums3.push_back(nums1[l1]);
-                    l1++;
-                }
-            }
         }
         while(l2<(int)nums2.size())
         {
-            nums3.push_back(nums2[l2++]);
+                nums3.push_back(nums2[l2++]);
         }
         while(l1<(int)nums1.size())
         {
-            nums3.push_back(nums1[l1++]);
+                nums3.push_back(nums1[l1++]);
         }
         /*
         cout<<"合并完成的数组为:"<<endl;
@@ -59,13 +60,13 @@ public:
         double tt;
         if((size%2)!=0)
         {
-            tt=nums3[(size-1)/2];
-            return tt;
+                tt=nums3[(size-1)/2];
+                return tt;
         }
         else
         {
-            tt=(nums3[(size-1)/2]+nums3[size/2])/2.0000;
-            return tt;
+                tt=(nums3[(size-1)/2]+nums3[size/2])/2.0000;
+                return tt;
         }
     }
 };
@@ -73,24 +74,24 @@ public:
 //主函数；
 int main()
 {
-    vector<int> nums1,nums2;//表示两个数组；
-    int size1,size2;//表示两个数组的大小；
-    cout<<"请输入两个数组的大小:"<<endl;
-    cin>>size1>>size2;
-    cout<<"请输入第一个数组的"<<size1<<"个数据:"<<endl;
-    int i;
-    int temp;
-    for(i=0;i<size1;i++)
-    {
-        cin>>temp;
-        nums1.push_back(temp);
-    }
-    cout<<"请输入第二个数组的"<<size2<<"个数据:"<<endl;
-    for(i=0;i<size2;i++)
-    {
-        cin>>temp;
-        nums2.push_back(temp);
-    }
-    Solution ss;
-    cout<<"两个数组的中值为:"<<ss.findMedianSortedArrays(nums1,nums2)<<endl;
+        vector<int> nums1,nums2;//表示两个数组；
+        int size1,size2;//表示两个数组的大小；
+        cout<<"请输入两个数组的大小:"<<endl;
+        cin>>size1>>size2;
+        cout<<"请输入第一个数组的"<<size1<<"个数据:"<<endl;
+        int i;
+        int temp;
+        for(i=0;i<size1;i++)
+        {
+                cin>>temp;
+                nums1.push_back(temp);
+        }
+        cout<<"请输入第二个数组的"<<size2<<"个数据:"<<endl;
+        for(i=0;i<size2;i++)
+        {
+                cin>>temp;
+                nums2.push_back(temp);
+        }
+        Solution ss;
+        cout<<"两个数组的中值为:"<<ss.findMedianSortedArrays(nums1,nums2)<<endl;
 }
