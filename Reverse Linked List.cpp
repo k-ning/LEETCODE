@@ -17,6 +17,44 @@ struct ListNode
     ListNode(int x) : val(x), next(NULL) {}
 };
 
+ListNode* rotateRight(ListNode* head, int k) {
+        if (k == 0 || head == NULL)
+                return head;
+        
+        int length = 0, t = 0;
+        int i = 1;
+        ListNode* node = head;
+        ListNode* current = head;
+        ListNode* next = current->next;
+        
+        while (node != NULL) {
+                length ++;
+                node = node->next;
+        }
+        if (k % length == 0) {
+                return head;
+        }
+        if (k / length == 0) 
+                t = length - k;
+        else
+                t = length - (k - k/length * length);
+        while (i < t) {
+                current = current->next;
+                next = current->next;
+                i++;
+        }
+        current->next = NULL;
+        
+        ListNode* head1 = next;
+        ListNode* tail = head1;
+        
+        while (tail->next != NULL) {
+                tail = tail->next;
+        }
+        tail->next = head;
+        return head1;
+}
+
 class Solution
 {
 public:
