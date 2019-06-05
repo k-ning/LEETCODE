@@ -13,29 +13,29 @@ using namespace std;
 //二分搜索查找中间值；
 int Binary_Search(vector<int> v,int value)
 {
-    int i;//表示临时变量；
-    int low=0;
-    int high=(int)v.size()-1;
-    int mid=(low+high)/2;
+        int i;//表示临时变量；
+        int low=0;
+        int high=(int)v.size()-1;
+        int mid=(low+high)/2;
     
-    for(i=low;i<=high;i++)
-    {
-        if(v[mid]>value)
+        for(i=low;i<=high;i++)
         {
-            high=mid;
-            mid=(low+high)/2;
+                if(v[mid]>value)
+                {
+                        high=mid;
+                        mid=(low+high)/2;
+                }
+                else if(v[mid]<value)
+                {
+                        low=mid;
+                        mid=(low+high)/2;
+                }
+                else if(v[mid]==value)
+                {
+                        return mid;
+                }
         }
-        else if(v[mid]<value)
-        {
-            low=mid;
-            mid=(low+high)/2;
-        }
-        else if(v[mid]==value)
-        {
-            return mid;
-        }
-    }
-    return mid;
+        return mid;
 }
 
 int main()
