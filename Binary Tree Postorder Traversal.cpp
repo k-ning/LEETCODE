@@ -10,14 +10,14 @@
 #include<vector>
 #include<stack>
 using namespace std;
-struct TreeNode
-{
+
+struct TreeNode {
     int val;
     TreeNode *left;
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
- 
+
 class Solution
 {
 public:
@@ -28,7 +28,7 @@ public:
                         return v;
                 stack<TreeNode *> s1,s2;
                 s1.push(tree);
-                
+
                 while(s1.empty()!=true) {
                         tree=s1.top();
                         s2.push(tree);
