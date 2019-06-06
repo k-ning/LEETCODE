@@ -22,44 +22,38 @@ struct TreeNode
 class Solution
 {
 public:
-    vector<vector<int>> levelOrderBottom(TreeNode* root)
-    {
+    vector<vector<int>> levelOrderBottom(TreeNode* root) {
         vector<vector<int>> v;
-        if(root==NULL)
+        if (root == NULL)
             return v;
         
-        TreeNode * tree=root;
+        TreeNode * tree = root;
         queue<TreeNode *> q;
         q.push(tree);
         
         vector<int> temp;
         stack<vector<int>> s;
-        int size=(int)q.size();
+        int size = (int)q.size();
         
-        while(q.empty()!=true)
-        {
-            while(size!=0)
-            {
-                tree=q.front();
+        while (q.empty() != true) {
+            while (size != 0) {
+                tree = q.front();
                 temp.push_back(tree->val);
                 q.pop();
                 
-                if(tree->left!=NULL)
-                {
+                if (tree->left != NULL) {
                     q.push(tree->left);
                 }
-                if(tree->right!=NULL)
-                {
+                if (tree->right != NULL) {
                     q.push(tree->right);
                 }
                 size--;
             }
-            size=(int)q.size();
+            size = (int)q.size();
             s.push(temp);
             temp.clear();
         }
-        while(s.empty()!=true)
-        {
+        while (s.empty() != true) {
             v.push_back(s.top());
             s.pop();
         }

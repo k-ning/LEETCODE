@@ -22,6 +22,7 @@ struct TreeNode
 class Solution
 {
 public:
+        /* Non-Recursive method. */
         vector<int> preorderTraversal(TreeNode* root) {
                 vector<int> v;
                 if(root == NULL) {
@@ -32,7 +33,7 @@ public:
                 stack<TreeNode *> s;
                 s.push(t);
         
-                while(s.empty() != true) {
+                while (s.empty() != true) {
                         t = s.top();
                         v.push_back(t->val);
                         s.pop();
@@ -46,6 +47,7 @@ public:
                 }
                 return v;
         }
+        /* Recursive Method. */
         void preorderTraversal_1(TreeNode* root) {
                 if (root != NULL) {
                         Display(root);
