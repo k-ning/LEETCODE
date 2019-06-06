@@ -22,28 +22,36 @@ struct TreeNode
 class Solution
 {
 public:
-    vector<int> inorderTraversal(TreeNode* root)
-    {
-        vector<int> v;
-        stack<TreeNode *> s;
-        TreeNode * tree=root;
-        while(tree!=NULL||s.empty()!=true)
+        vector<int> inorderTraversal(TreeNode* root)
         {
-            if(tree!=NULL)
-            {
-                s.push(tree);
-                tree=tree->left;
-            }
-            else
-            {
-                tree=s.top();
-                v.push_back(tree->val);
-                s.pop();
-                tree=tree->right;
-            }
+                vector<int> v;
+                stack<TreeNode *> s;
+                TreeNode * tree=root;
+                while(tree!=NULL||s.empty()!=true)
+                {
+                        if(tree!=NULL)
+                        {
+                                s.push(tree);
+                                tree=tree->left;
+                        }
+                        else
+                        {
+                                tree=s.top();
+                                v.push_back(tree->val);
+                                s.pop();
+                                tree=tree->right;
+                        }
+                }
+                return v;
         }
-        return v;
-    }
+
+        void inorderTraversal_1(TreeNode* root) {
+                if (root != NULL) {
+                        inorderTraversal_1(root->left);
+                        cout<<root->val<<endl;
+                        inorderTraversal_1(root->right);
+                }
+        }
 };
 int main()
 {
