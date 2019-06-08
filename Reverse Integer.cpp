@@ -6,10 +6,10 @@
 //  Copyright (c) 2015年 唧唧歪歪. All rights reserved.
 //
 
-#include<iostream>
-#include<string>
-#include<vector>
-#include<cmath>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cmath>
 
 using namespace std;
 
