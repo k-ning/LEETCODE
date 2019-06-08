@@ -30,7 +30,7 @@ ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
 			l2 = l2->next;
 		}
 	}
-	//善用三目运算符;
+	// Make good use of trinomial operators.
 	temp->next = (l1 == NULL) ? l2 : l1;
 	return head->next;
 }
