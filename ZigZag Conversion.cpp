@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 唧唧歪歪. All rights reserved.
 //
 
-#include<iostream>
-#include<string>
+#include <iostream>
+#include s<string>
 using namespace std;
 class Solution
 {

@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 唧唧歪歪. All rights reserved.
 //
 
-#include<iostream>
-#include<vector>
-#include<stack>
+#include <iostream>
+#include <vector>
+#include <stack>
 using namespace std;
 
 //定义二叉树节点；

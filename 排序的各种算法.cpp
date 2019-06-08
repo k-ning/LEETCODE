@@ -5,8 +5,8 @@
 //  Created by 唧唧歪歪 on 15/4/20.
 //  Copyright (c) 2015年 唧唧歪歪. All rights reserved.
 //
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 void Insert_Sort(vector<int> &vec);//插入排序；

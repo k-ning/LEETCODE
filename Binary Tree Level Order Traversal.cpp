@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 唧唧歪歪. All rights reserved.
 //
 
-#include<iostream>
-#include<vector>
-#include<queue>
+#include <iostream>
+#include <vector>
+#include <queue>
 using namespace std;
 
 struct TreeNode

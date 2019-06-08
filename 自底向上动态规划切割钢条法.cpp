@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 唧唧歪歪. All rights reserved.
 //
 
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
 //自底向上动态规划求解切割钢条；
 int Bottom_Up_Cut_Rod(vector<int> p,int n)

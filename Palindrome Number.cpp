@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 唧唧歪歪. All rights reserved.
 //
 
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 class Solution

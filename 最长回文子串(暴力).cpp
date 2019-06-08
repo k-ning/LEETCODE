@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 唧唧歪歪. All rights reserved.
 //
 
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 using namespace std;
 
 //判断字符串是否为回文串；

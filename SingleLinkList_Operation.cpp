@@ -6,9 +6,10 @@
 //  Copyright (c) 2015年 唧唧歪歪. All rights reserved.
 //
 
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
+
 struct LinkListNode
 {
     int value;//单链表的值；

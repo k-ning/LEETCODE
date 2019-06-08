@@ -6,10 +6,10 @@
 //  Copyright (c) 2015年 唧唧歪歪. All rights reserved.
 //
 
-#include<iostream>
-#include<vector>
-#include<string>
-#include<unordered_map>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <unordered_map>
 using namespace std;
 
 class Solution

@@ -5,8 +5,8 @@
 //  Created by 唧唧歪歪 on 15/4/27.
 //  Copyright (c) 2015年 唧唧歪歪. All rights reserved.
 //
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 int Memorized_Cut_Rod_Aux(vector<int> p, vector<int> &v, int n);

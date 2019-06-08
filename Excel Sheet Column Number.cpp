@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 唧唧歪歪. All rights reserved.
 //
 
-#include<iostream>
-#include<map>
-#include<cmath>
+#include <iostream>
+#include <map>
+#include <cmath>
 using namespace std;
 class Solution
 {
