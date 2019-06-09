@@ -17,12 +17,12 @@ vector<int> findDuplicates_1(vector<int>& nums) {
 	while (current < nums.size() && next < nums.size()) {
 		if (nums[current] != nums[next]) {
 			current = next;
-			next ++;
 		} else if (nums[current] == nums[next]) {
 			temp.push_back(nums[current]);
 			current = next + 1;
-			next = current + 1;
 		}
+		next = current + 1;
+
 	}
 	return temp;
 }
