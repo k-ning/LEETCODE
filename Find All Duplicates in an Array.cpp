@@ -1,7 +1,9 @@
 #include <iostream>
 using namespace std;
 
-// Method One.
+// Method One:
+// Sort() method first and if two elements are equal, then
+// they must adjacent in the sorted array.
 vector<int> findDuplicates_1(vector<int>& nums) {
 	vector<int> temp;
 	int current = 0;
@@ -25,9 +27,9 @@ vector<int> findDuplicates_1(vector<int>& nums) {
 	return temp;
 }
 
-// Method Two.
-// A great method which uses the original array to sort.
-// Using the hash searching method.
+// Method Two:
+// Abstract this issue from finding the duplicate items
+// in the array into the module of hash searching method.
 vector<int> findDuplicates(vector<int>& nums) {
 	int num = 0;
 	vector<int> temp;
@@ -35,11 +37,11 @@ vector<int> findDuplicates(vector<int>& nums) {
 	if (nums.size() == 0) {
 		return temp;
 	}
-	
+
 	for (int i = 0; i < nums.size(); i++) {
 		num = abs(nums[i]);
 
-		if (nums[num - 1] < 0) {
+ 		if (nums[num - 1] < 0) {
 			temp.push_back(num);
 		} else if (nums[num - 1] > 0) {
 			nums[num - 1] *= -1;
