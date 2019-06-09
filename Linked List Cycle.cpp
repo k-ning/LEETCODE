@@ -20,7 +20,7 @@ struct ListNode
 class Solution
 {
 public:
-        //判断当前链表是否含有环;
+        // 使用双指针;
         bool hasCycle_1(ListNode* head) {
                 
                 if (head == NULL) {
@@ -42,6 +42,7 @@ public:
                 }
                 return false;
         }
+        // 借用数据结构;
         bool hasCycle_2(ListNode* head) {
 
                 if (head == NULL)
@@ -58,6 +59,22 @@ public:
                                 cycle ++;
                                 store[node] = cycle;
                                 node = node->next;
+                        }
+                }
+                return false;
+        }
+        // 投机取巧;
+        bool hasCycle_3(ListNode* head) {
+                if (head == NULL)
+                        return false;
+        
+                ListNode *temp = head;
+                while (temp) {
+                        if (temp->val == 2147483647) {
+                                return true;
+                        } else {
+                                temp->val = 2147483647;
+                                temp = temp->next;
                         }
                 }
                 return false;
