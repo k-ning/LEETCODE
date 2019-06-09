@@ -7,6 +7,7 @@ struct TreeNode {
 	TreeNode *right;
 	TreeNode(int x) : val(x), left(NULL), rigth(NULL) {}
 };
+
 TreeNode* searchBST(TreeNode* root, int val) {
         if (root == NULL) return root;
         

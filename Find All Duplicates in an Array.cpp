@@ -22,7 +22,6 @@ vector<int> findDuplicates_1(vector<int>& nums) {
 			current = next + 1;
 		}
 		next = current + 1;
-
 	}
 	return temp;
 }
