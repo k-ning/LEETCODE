@@ -3,6 +3,7 @@ using namespace std;
 
 /* Cycle the linkedlist for twice times. */
 ListNode* removeNthFromEnd(ListNode* head, int n) {
+        
         if (head == NULL || n == 0) {
             return head;
         }

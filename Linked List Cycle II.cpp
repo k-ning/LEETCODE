@@ -17,34 +17,33 @@ struct ListNode
 class Solution
 {
 public:
-    ListNode *detectCycle(ListNode *head)
-    {
-        if(head==NULL)
-            return NULL;
-        ListNode * slow=head;
-        ListNode * quick=head;
+        ListNode *detectCycle(ListNode *head) {
+
+                if (head == NULL)
+                        return NULL;
+
+                ListNode * slow = head;
+                ListNode * quick = head;
         
-        while(quick!=NULL&&quick->next!=NULL)
-        {
-            slow=slow->next;
-            quick=quick->next->next;
-            if(quick==slow)
-            {
-                break;
-            }
+                while (quick != NULL && quick->next != NULL) {
+                        slow = slow->next;
+                        quick = quick->next->next;
+                        if (quick == slow) {
+                                break;
+                        }
+                }
+
+                if (quick == NULL || quick->next == NULL) {
+                        return NULL;
+                }
+                
+                slow = head;
+                while (slow != quick) {
+                        slow = slow->next;
+                        quick = quick->next;
+                }
+                return slow;
         }
-        if(quick==NULL||quick->next==NULL)
-        {
-            return NULL;
-        }
-        slow=head;
-        while(slow!=quick)
-        {
-            slow=slow->next;
-            quick=quick->next;
-        }
-        return slow;
-    }
 };
 int main()
 {
