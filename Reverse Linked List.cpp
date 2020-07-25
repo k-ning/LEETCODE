@@ -17,7 +17,7 @@ struct ListNode
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-ListNode* rotateRight(ListNode* head, int k) {
+ListNode* rotateRight (ListNode* head, int k) {
         if (k == 0 || head == NULL)
                 return head;
         
@@ -58,33 +58,33 @@ ListNode* rotateRight(ListNode* head, int k) {
 class Solution
 {
 public:
-    ListNode* reverseList(ListNode * head)
-    {
-        ListNode * tt=NULL;
-        if(head==NULL)
+    ListNode* reverseList (ListNode * head) {
+
+        ListNode * tt = NULL;
+        if (head == NULL)
             return tt;
         
-        tt=head;//赋予头指针;
-        ListNode * temp=NULL;
-        ListNode * list=NULL;
-        while(tt!=NULL)
-        {
-            temp=new ListNode(tt->val);
-            list=Insert(list,temp);
-            tt=tt->next;
+        tt = head;//赋予头指针;
+        ListNode * temp = NULL;
+        ListNode * list = NULL;
+
+        while (tt != NULL) {
+            temp = new ListNode (tt->val);
+            list = Insert (list,temp);
+            tt = tt->next;
         }
         delete head;
-        head=list;
+        head = list;
         return head;
     }
     
     //向链表中插入结点元素temp;
-    ListNode * Insert(ListNode * head,ListNode * temp)
-    {
-        if(head==NULL)
+    ListNode * Insert (ListNode * head, ListNode * temp) {
+
+        if (head == NULL)
             return temp;
-        temp->next=head;
-        head=temp;
+        temp->next = head;
+        head = temp;
         return head;
     }
 };
